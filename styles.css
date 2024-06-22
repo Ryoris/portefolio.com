@@ -56,8 +56,6 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
 
@@ -92,4 +90,49 @@ a:hover {
     color: #777777; /* Couleur gris clair */
     margin-top: 10px; /* Marge supérieure pour l'espacement */
     display: block; /* Affichage en bloc pour forcer une nouvelle ligne */
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+.carousel img {
+    width: 100%;
+    display: none;
+}
+.carousel img.active {
+    display: block;
+}
+.carousel .prev, .carousel .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.carousel .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.carousel .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.profile-picture {
+    width: 150px; /* Ajustez la taille selon vos besoins */
+    height: 150px; /* Ajustez la taille selon vos besoins */
+    border-radius: 50%; /* Arrondir l'image */
+    object-fit: cover; /* S'assure que l'image est bien ajustée dans le cercle */
+    display: block; /* Assure que l'image se comporte comme un élément de bloc */
+    margin: 30px; /* Centre l'image horizontalement */
 }
