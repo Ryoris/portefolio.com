@@ -1,3 +1,10 @@
+/* Variables */
+:root {
+    --primary-color: #35424a;
+    --secondary-color: #ffffff;
+}
+
+/* Global styles */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -7,25 +14,30 @@ body {
     color: #333;
 }
 
+/* Header */
 header {
-    background: #35424a;
+    background: linear-gradient(to bottom, #35424a, #1a252b);
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
@@ -33,12 +45,15 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: #f4b41a;
 }
 
+/* Main content */
 main {
     padding: 20px;
     margin: 20px auto;
@@ -49,22 +64,39 @@ main {
 
 main section h2 {
     color: #35424a;
-}
+    font-size: 1.8em;
+    margin-bottom: 20px;}
 
+
+/* Footer */
 footer {
-    background: #35424a;
+    background: linear-gradient(to bottom, #35424a, #1a252b);
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
     width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Links */
 a {
-    color: #35424a;
+    color: #02456e;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     color: #f4b41a;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0px 10px ;
+    border: 4px solid #4d5b78;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .responsive-image {
@@ -98,41 +130,40 @@ a:hover {
     max-width: 600px;
     margin: auto;
 }
+
 .carousel img {
     width: 100%;
     display: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .carousel img.active {
     display: block;
 }
+
 .carousel .prev, .carousel .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     width: auto;
-    margin-top: -22px;
     padding: 16px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
 }
+
 .carousel .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
+
 .carousel .prev {
     left: 0;
     border-radius: 3px 0 0 3px;
 }
 
-.profile-picture {
-    width: 150px; /* Ajustez la taille selon vos besoins */
-    height: 150px; /* Ajustez la taille selon vos besoins */
-    border-radius: 50%; /* Arrondir l'image */
-    object-fit: cover; /* S'assure que l'image est bien ajustée dans le cercle */
-    display: block; /* Assure que l'image se comporte comme un élément de bloc */
-    margin: 30px; /* Centre l'image horizontalement */
-}
