@@ -1,0 +1,91 @@
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0px 10px ;
+    border: 4px solid #3f4f6e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.responsive-image {
+    max-width: 50%;
+    height: auto;
+}
+
+.project-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.video-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.creation-date {
+    font-size: 0.75em; /* Taille de la police plus petite */
+    color: #777777; /* Couleur gris clair */
+    margin-top: 10px; /* Marge supérieure pour l'espacement */
+    display: block; /* Affichage en bloc pour forcer une nouvelle ligne */
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.carousel img {
+    width: 100%;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel img.active {
+    display: block;
+}
+
+.carousel .prev, .carousel .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+
+.carousel .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.attribution {
+    position: relative; /* Position absolue par rapport au body */
+    bottom: 5px; /* Ajuste la position verticale de l'attribution */
+    left: 87%; /* Ajuste la position horizontale de l'attribution */
+    background-color: rgba(0, 0, 0, 0.236); /* Fond semi-transparent pour l'attribution */
+    color: #ffffff; /* Couleur du texte d'attribution */
+    padding: 5px 10px; /* Espacement à l'intérieur de l'attribution */
+    font-size: 12px; /* Taille de police de l'attribution */
+}
