@@ -33,7 +33,7 @@ header::after {
     left: 0;
     width: 100%;
     height: 30px; /* Ajustez la hauteur selon vos besoins */
-    background: url('wave.svg') repeat-x;
+    background: url('../svg/wave.svg') repeat-x;
     z-index: -1;
 }
 
