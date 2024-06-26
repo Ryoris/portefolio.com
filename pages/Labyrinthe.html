@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labyrinthe</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <h1>Labyrinthe</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="IA Tetris.html">IA Tetris</a></li>
+                <li><a href="Labyrinthe.html">Labyrinthe</a></li>
+                <li><a href="Deeps Hit.html">Deeps Hit</a></li>
+                <li><a href="Site Web.html">Site Web</a></li>
+                <li><a href="Detect.objet.html">Detect. objet</a></li>
+                <li><a href="A venir.html">A venir</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Jeu du Labyrinthe</h2>
+            <div class="video-container">
+                <video width="640" height="480" controls>
+                    <source src="../videos/labyrinthe_gameplay.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+            </div>
+            <article>
+                <h3>Genèse du Projet</h3>
+                <p>Né de ma passion pour les casse-têtes et de mon intérêt récent pour les algorithmes de recherche, l'idée était de construire un jeu où un joueur navigue à travers un labyrinthe généré aléatoirement, évitant les gardes tout en cherchant à atteindre la sortie. Pour cela j’ai utilisé l'outils de développement de jeux en Python Pygame pour les graphismes et l'interface utilisateur.</p>
+                
+                <h3>Utilisation de l'Algorithme A*</h3>
+                <p>Etant impressionné par l’efficacité de l'algorithme A*, j’ai eu à cœur de le mettre au centre de mon projet. Cet algorithme est idéal pour trouver le chemin le plus court entre deux points dans un graphe, ce qui est essentiel pour s'assurer que chaque labyrinthe généré possède un chemin valide du point de départ à la sortie.</p>
+                <p>Les gardes dans "Labyrinthe" utilisent également l'A* de manière intelligente. En l'absence de détection du joueur, les gardes patrouillent en choisissant une destination aléatoire et en s’y rendant grâce à l’algorithme. Lorsqu'un garde détecte la présence du joueur à proximité, A* est utilisé pour calculer le chemin le plus direct vers le joueur. Cela crée une réaction dynamique où les gardes ajustent leur patrouille en fonction des actions du joueur.</p>
+
+                <h3>Implémentation Technique</h3>
+                <p>Pour intégrer l'algorithme A* dans mon jeu, j'ai suivi ces étapes principales :</p>
+                <ul>
+                    <li><strong>Heuristique :</strong> J'ai défini une fonction heuristique simple mais efficace pour estimer le coût restant entre deux points dans le labyrinthe. Dans mon cas, j'ai utilisé la distance de Manhattan, appropriée pour des grilles comme celles d'un labyrinthe.</li>
+                    <li><strong>Structures de Données :</strong> J'ai utilisé des structures de données telles que les tas binaires (utilisés avec le module heapq de Python) pour gérer les nœuds à explorer par l'algorithme A*, assurant ainsi une efficacité optimale même sur de grandes grilles de jeu.</li>
+                </ul>
+                
+                <h3>Conclusion</h3>
+                <p>En conclusion, l'utilisation de l'algorithme A* pour la patrouille des gardes dans "Labyrinthe" représente une intégration innovante et efficace des algorithmes de recherche dans le développement de jeux. Cela permet de créer des environnements dynamiques où les ennemis réagissent intelligemment aux actions du joueur, offrant ainsi une expérience de jeu stratégique et immersive.</p>
+            </article>
+            <p><a href="https://github.com/Ryoris/jeux.python" target="_blank">Voir Github</a></p>
+            <p><strong>Technologies utilisées :</strong> Python, algorithme A*</p> 
+            <p><span class="creation-date">Projet réalisé en juin 2024</span></p>
+        </section>
+    </main>
+    <p><a href="https://fr.freepik.com/photos-gratuite/fond-degrade-futuriste-lignes-particules_15601281.htm#query=fond%20site%20web&position=8&from_view=keyword&track=ais_user&uuid=c0e137e0-74fb-4ef8-b27b-c6f5d3493242" class= "attribution">Image de rawpixel.com sur Freepik</a></p>
+    <footer>
+        <p>&copy; 2024 Clément Dubreuil</p>
+    </footer>
+</body>
+</html>
