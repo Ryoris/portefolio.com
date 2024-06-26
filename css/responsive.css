@@ -18,10 +18,17 @@
 
 .project-card {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto; /* Marge extérieure pour centrer la carte */
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    transition: box-shadow 0.3s, transform 0.3s; /* Transition fluide */
+}
+
+.project-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Ombre plus intense au survol */
+    transform: translateY(-5px); /* Légère translation vers le haut */
 }
 
 .video-container {
@@ -88,4 +95,43 @@
     color: #ffffff; /* Couleur du texte d'attribution */
     padding: 5px 10px; /* Espacement à l'intérieur de l'attribution */
     font-size: 12px; /* Taille de police de l'attribution */
+}
+
+/* menu déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10%;
+    left: -35px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 30%;
+    padding: 5px 5px; /* Augmentez les valeurs de padding selon vos besoins */
+    margin: -0px -5px; /* Ajustez les marges pour augmenter la zone survolée */
 }

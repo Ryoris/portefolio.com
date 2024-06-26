@@ -13,39 +13,53 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
-                <li><a href="IA Tetris.html">IA Tetris</a></li>
-                <li><a href="Labyrinthe.html">Labyrinthe</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Game Python</a>
+                    <div class="dropdown-content">
+                        <a href="IA Tetris.html">IA Tetris</a>
+                        <a href="Labyrinthe.html">Labyrinthe</a>
+                        <a href="Snake.html">Snake</a>
+                    </div>
+                </li>
                 <li><a href="Deeps Hit.html">Deeps Hit</a></li>
                 <li><a href="Site Web.html">Site Web</a></li>
                 <li><a href="Detect.objet.html">Detect. objet</a></li>
-                <li><a href="A venir.html">A venir</a></li>
                 <li><a href="about.html">À propos</a></li>
             </ul>
         </nav>
     </header>   
     <main>
         <section>
-            <h2>Coder un jeu en 48h</h2>
+            <h2>Projet GAMEJAM 64 : coder un jeu en 48h</h2>
             <div class="carousel">
-                <img src="../images/Deeps Hit/pres1.jpg" alt="Projet 2 Image 1" class="active">
-                <img src="../images/Deeps Hit/pres2.jpg" alt="Projet 2 Image 2">
-                <img src="../images/Deeps Hit/pres3.jpg" alt="Projet 2 Image 3">
-                <img src="../images/Deeps Hit/pres4.jpg" alt="Projet 2 Image 4">
-                <img src="../images/Deeps Hit/pres5.png" alt="Projet 2 Image 5">
+                <img src="../images/Deeps Hit/pres1.jpg" alt="Deeps Hit Img 1" class="active">
+                <img src="../images/Deeps Hit/pres2.jpg" alt="Deeps Hit Img 2">
+                <img src="../images/Deeps Hit/pres3.jpg" alt="Deeps Hit Img 3">
+                <img src="../images/Deeps Hit/pres4.jpg" alt="Deeps Hit Img 4">
+                <img src="../images/Deeps Hit/pres5.png" alt="Deeps Hit Img 5">
                 <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
                 <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
-            <p>Avec des camarades et moi-même, nous avons pris part à une compétition GAMEJAM 64, où le défi était de concevoir un jeu vidéo à partir de zéro, avec un thème et une contrainte imposés, et un délai de 48 heures imparti. Nous avons opté pour la programmation en C# pour sa capacité à intégrer efficacement les mécaniques de jeu.</p>
-            <p>Mon rôle dans cette équipe consistait à :</p>
-            <ul>
-                <li>Développer l'idée globale et concevoir le scénario</li>
-                <li>Programmer le jeu ainsi que ses mécaniques</li>
-                <li>Créer des graphismes et animations en pixel art</li>
-                <li>Intégrer des effets sonores</li>
-            </ul>
-            <p>Dans notre jeu "Deeps Hit", le joueur incarne un plongeur qui explore différents niveaux, affronte des ennemis, le tout en améliorant son équipement.</p>
+            <article>
+                <h3>Conception du Scénario</h3>
+                <p>En participant à la compétition GAMEJAM 64, mes camarades et moi avons relevé le défi de concevoir un jeu vidéo à partir de zéro en seulement 48 heures, en respectant un thème "Profondeur" et une contrainte imposée. Pour ce projet, nous avons choisi de programmer en C# grâce à son intégration efficace des mécaniques de jeu via le moteur Unity.</p>
+                <p>Nous avons commencé par une séance de brainstorming pour définir l'idée globale du jeu. Le concept de "Deeps Hit" est né : un jeu où le joueur incarne un plongeur explorant des niveaux sous-marins, affrontant des ennemis et améliorant son équipement.</p>
+                
+                <h3>Contrainte de la "Mise en Abyme"</h3>
+                <p>La contrainte imposée pour cette GAMEJAM était la "mise en abyme". Pour respecter cette contrainte, nous avons intégré un concept de "jeu dans le jeu". Plus précisément, pour passer d'un niveau à un autre, le joueur devait interagir avec une borne d'arcade virtuelle et jouer à un mini-jeu intégré dans "Deeps Hit".</p>
+                <p>Cette borne d'arcade proposait un mini-jeu où il fallait esquiver des ennemies et récupérer des bonus qui permettaient d’augmenter les statistiques du personnage et de débloquer des armes. Pour créer ce mini-jeu, je me suis grandement inspiré du gameplay du jeu Undertale.</p>
+
+                <h3>Programmation du Jeu et de ses Mécaniques</h3>
+                <p>En utilisant Unity et C#, nous avons pu coder les différentes mécaniques du jeu, y compris le mouvement du personnage, les interactions avec les ennemis et l'environnement, ainsi que le système d'amélioration de l'équipement. J'ai dessiné certains graphismes / animations du jeu en pixel art notamment pour le jeu sur la borne d’arcane. J'ai également intégré des effets sonores pour enrichir l'expérience de jeu.</p>
+
+                <h3>Utilisation de Git pour la Collaboration</h3>
+                <p>Nous avons créé un répertoire Git pour notre projet, ce qui nous a permis de suivre toutes les modifications apportées au code source et aux ressources du jeu. Chaque membre de l'équipe a travaillé sur des branches distinctes pour développer des fonctionnalités spécifiques. Une fois qu'une fonctionnalité était terminée et testée, nous fusionnions la branche correspondante dans la branche principale, après avoir résolu les éventuels conflits de code. </p>
+
+                <h3>Résultat Final</h3>
+                <p>Grâce à une collaboration efficace et à l'utilisation d'outils adaptés comme Git, nous avons réussi à créer "Deeps Hit" en 48 heures. Participer à cette GAMEJAM a été une expérience enrichissante, nous permettant de développer nos compétences en programmation, en design et en travail d'équipe, tout en relevant le défi de créer un jeu complet dans un délai très court.</p>
+            </article>
             <p><a href="https://damnab.itch.io/deeps-hit" target="_blank">Jouer à Deeps Hit</a></p>
-            <p><strong>Technologies utilisées :</strong> Unity, C#</p>
+            <p><strong>Technologies utilisées :</strong> Unity, C#, Github</p>
             <p><span class="creation-date">Projet réalisé en janvier 2024</span></p>
         </section>
     </main>
