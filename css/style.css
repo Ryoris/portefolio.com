@@ -44,7 +44,7 @@ header h1 {
 /* Navigation */
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 0 15px;
     text-align: center;
 }
 
@@ -110,12 +110,16 @@ a:hover {
         font-size: 2em;
     }
 
+    nav ul{
+        padding: 5px 15px;
+    }
+
     nav ul li {
         display:flexbox;
     }
 
     main {
-        margin: 10px;
+        margin: 20px;
         max-width: 100%;
     }
 }

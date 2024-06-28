@@ -100,8 +100,8 @@
 
 .attribution {
     position: relative;
-    bottom: 5px;
-    right: 5px;
+    bottom: 4px;
+    left: 15px;
     background-color: rgba(0, 0, 0, 0.236);
     color: #ffffff;
     padding: 5px 10px;
@@ -161,7 +161,6 @@
     }
 
     .project-card {
-        margin: 10px;
         padding: 10px;
     }
 
