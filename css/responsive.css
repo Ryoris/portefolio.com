@@ -10,7 +10,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
 .responsive-image {
     max-width: 50%;
     height: auto;
@@ -18,30 +17,42 @@
 
 .project-card {
     max-width: 800px;
-    margin: 20px auto; /* Marge extérieure pour centrer la carte */
+    margin: 20px auto;
     background-color: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
-    padding: 20px; /* Espacement intérieur */
-    border-radius: 10px; /* Coins arrondis */
-    transition: box-shadow 0.3s, transform 0.3s; /* Transition fluide */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .project-card:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Ombre plus intense au survol */
-    transform: translateY(-5px); /* Légère translation vers le haut */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
 .video-container {
-    text-align: center;
-    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.1);
 }
 
 
+.video-container .responsive-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .creation-date {
-    font-size: 0.75em; /* Taille de la police plus petite */
-    color: #777777; /* Couleur gris clair */
-    margin-top: 10px; /* Marge supérieure pour l'espacement */
-    display: block; /* Affichage en bloc pour forcer une nouvelle ligne */
+    font-size: 0.75em;
+    color: #777777;
+    margin-top: 10px;
+    display: block;
 }
 
 .carousel {
@@ -88,14 +99,17 @@
 }
 
 .attribution {
-    position: relative; /* Position absolue par rapport au body */
-    bottom: 5px; /* Ajuste la position verticale de l'attribution */
-    left: 87%; /* Ajuste la position horizontale de l'attribution */
-    background-color: rgba(0, 0, 0, 0.236); /* Fond semi-transparent pour l'attribution */
-    color: #ffffff; /* Couleur du texte d'attribution */
-    padding: 5px 10px; /* Espacement à l'intérieur de l'attribution */
-    font-size: 12px; /* Taille de police de l'attribution */
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.236);
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 12px;
+    max-width: calc(100% - 10px); /* Ensure it stays within the body dimensions */
+    box-sizing: border-box; /* Include padding in the element's total width */
 }
+
 
 /* menu déroulant */
 .dropdown {
@@ -132,6 +146,32 @@
 .dropdown:hover .dropbtn {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 30%;
-    padding: 5px 5px; /* Augmentez les valeurs de padding selon vos besoins */
-    margin: -0px -5px; /* Ajustez les marges pour augmenter la zone survolée */
+    padding: 5px 5px;
+    margin: -0px -5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .responsive-image {
+        max-width: 100%;
+    }
+
+    .project-card {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .attribution {
+        font-size: 10px;
+    }
+
+    .carousel .prev, .carousel .next {
+        padding: 10px;
+        font-size: 14px;
+    }
+
 }
