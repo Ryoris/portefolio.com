@@ -108,14 +108,16 @@ a:hover {
 
     header h1 {
         font-size: 2em;
+        margin-top: 5px;
     }
 
     nav ul{
-        padding: 5px 15px;
+        padding: 0px 15px;
     }
 
     nav ul li {
         display:flexbox;
+        margin: 5px 15px;
     }
 
     main {
