@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Web</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <h1>Guide CNN</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Game Python</a>
+                    <div class="dropdown-content">
+                        <a href="IA Tetris.html">IA Tetris</a>
+                        <a href="Labyrinthe.html">Labyrinthe</a>
+                        <a href="Snake.html">Snake</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">IA Learning</a>
+                    <div class="dropdown-content">
+                        <a href="Guide CNN.html">Guide CNN</a>
+                        <a href="Detect.chiffre.html">Detect. chiffre</a>
+                        <a href="Detect.objet.html">Detect. objet</a>
+                    </div>
+                </li>
+                <li><a href="Deeps Hit.html">Deeps Hit</a></li>
+                <li><a href="Site Web.html">Site Web</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Fonctionnement des Réseaux de Neurones Convolutifs (CNN)</h2>
+            <img src="../images/CNN/CCN.png" alt="Schéma" class="responsive-image">
+            <article>
+                <p>Les réseaux de neurones convolutifs (CNN) sont une classe de réseaux de neurones particulièrement efficaces pour le traitement et la reconnaissance d'images. Voici une explication simplifiée de leur fonctionnement :</p>
+
+                <h3>1. Couches de Convolution</h3>
+                <p>Les couches de convolution sont le cœur des CNN. Elles fonctionnent en appliquant des filtres (ou noyaux) sur l'image d'entrée pour extraire des caractéristiques locales, telles que les bords, les textures et les motifs.</p>
+                <p><strong>Filtre (ou noyau) : </strong>Un petit tableau de poids qui se déplace sur l'image d'entrée. </p>
+                <p><strong>Convolution : </strong>L'opération qui consiste à multiplier les valeurs des pixels de l'image par les poids du filtre et à additionner les résultats pour produire une nouvelle valeur. Ce processus est répété pour chaque position du filtre sur l'image, produisant ainsi une carte de caractéristiques. </p>
+                
+                <h3>2. Couches de Pooling</h3>
+                <p>Les couches de pooling (ou sous-échantillonnage) réduisent la dimensionnalité des cartes de caractéristiques tout en conservant les informations les plus importantes. La méthode la plus courante est le max-pooling.</p>
+                <p><strong>Max-pooling : </strong>Divise la carte de caractéristiques en sous-régions et conserve uniquement la valeur maximale de chaque sous-région. Cela permet de réduire la taille des données et de rendre le modèle plus robuste aux variations et aux translations des images d'entrée. </p>
+
+                <h3>3. Couches Entièrement Connectées</h3>
+                <p>Après plusieurs couches de convolution et de pooling, les cartes de caractéristiques sont aplaties et passées à travers des couches entièrement connectées (ou denses). Ces couches fonctionnent de la même manière que dans les réseaux de neurones classiques.</p>
+                <p><strong>Couches denses : </strong>Chaque neurone est connecté à tous les neurones de la couche précédente, ce qui permet de combiner les caractéristiques extraites pour faire des prédictions finales. </p>
+
+                <h3>4. Fonction d'Activation</h3>
+                <p>Les fonctions d'activation introduisent la non-linéarité dans le réseau, permettant de modéliser des relations complexes. La fonction d'activation la plus couramment utilisée dans les CNN est la ReLU (Rectified Linear Unit).</p>
+                <p><strong>ReLU : </strong>Remplace toutes les valeurs négatives par zéro, ajoutant ainsi de la non-linéarité au modèle sans augmenter significativement le coût de calcul. </p>
+
+                <h3>5. Entraînement et Optimisation</h3>
+                <p>Comme tous les réseaux de neurones, les CNN sont entraînés en ajustant les poids des filtres et des couches denses pour minimiser une fonction de coût (souvent l'entropie croisée pour les tâches de classification). Cela se fait via une méthode appelée rétropropagation.</p>
+                <p><strong>Rétropropagation : </strong>Calcule le gradient de la fonction de coût par rapport à chaque poids et ajuste les poids en conséquence en utilisant une méthode d'optimisation, telle que Adam ou SGD (Stochastic Gradient Descent). </p>
+
+                <h3>Conclusion</h3>
+                <p>Les réseaux de neurones convolutifs sont puissants et flexibles, ce qui les rend adaptés à une grande variété de tâches de reconnaissance d'images. Leur capacité à apprendre des caractéristiques hiérarchiques et leur robustesse aux variations des images en font l'une des méthodes les plus efficaces pour le traitement des images et la vision par ordinateur. </p>
+                <p></p>
+                <p><strong class="creation-date">Source : ChatGPT by OpenAI</strong></p>
+            </article>
+            <p><span class="creation-date">Projet réalisé en juin 2024</span></p>
+        </section>
+    </main>
+    <p><a href="https://fr.freepik.com/photos-gratuite/fond-degrade-futuriste-lignes-particules_15601281.htm#query=fond%20site%20web&position=8&from_view=keyword&track=ais_user&uuid=c0e137e0-74fb-4ef8-b27b-c6f5d3493242" class= "attribution">Image de rawpixel.com sur Freepik</a></p>
+    <footer>
+        <p>&copy; 2024 Clément Dubreuil</p>
+    </footer>
+</body>
+</html>
+

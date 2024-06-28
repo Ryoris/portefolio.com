@@ -11,8 +11,9 @@
 }
 
 .responsive-image {
-    max-width: 50%;
-    height: auto;
+    padding-top: 15px ;
+    padding-bottom: 15px;
+    max-width: 80%;
 }
 
 .project-card {
@@ -78,7 +79,6 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: auto;
     padding: 16px;
     color: white;
     font-weight: bold;
@@ -96,6 +96,11 @@
 .carousel .prev {
     left: 0;
     border-radius: 3px 0 0 3px;
+}
+
+.carousel img {
+    width: 100%; /* Assurez-vous que les images remplissent la largeur du conteneur */
+    height: auto; /* Garantit que les images conservent leur proportion */
 }
 
 .attribution {
