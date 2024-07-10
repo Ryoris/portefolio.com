@@ -103,6 +103,18 @@
     height: auto; /* Garantit que les images conservent leur proportion */
 }
 
+.container {
+    display: flex;   
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.badge-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
 .attribution {
     position: relative;
     bottom: 4px;
