@@ -192,36 +192,52 @@
 
 }
 
+
 /* Styles pour la bannière de cookies */
 .cookie-banner {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9); /* Couleur avec transparence */
     color: #fff;
     padding: 15px;
     text-align: center;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cookie-banner p {
     margin: 0;
-    display: inline;
 }
 
 .cookie-banner a {
-    color: #00f;
+    color: rgb(149, 149, 246);
     text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.cookie-banner a:hover,
+.cookie-banner a:focus {
+    color: #0056b3;
 }
 
 .cookie-banner button {
-    background-color: #00f;
+    background-color: rgb(77, 77, 203);
     color: #fff;
     border: none;
     padding: 10px 20px;
     margin-left: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 20px; /* Coins arrondis */
+}
+
+.cookie-banner button:hover,
+.cookie-banner button:focus {
+    background-color: rgb(77, 77, 203);
 }
 
 /* Styles pour la personnalisation des cookies */
@@ -231,12 +247,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: rgba(255, 251, 251, 0.95); /* Couleur avec transparence */
     color: #333;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #9f9f9f;
     z-index: 1001;
     text-align: center;
+    border-radius: 20px; /* Coins arrondis */
 }
 
 .cookie-customize p {
@@ -249,9 +266,17 @@
 }
 
 .cookie-customize button {
-    background-color: #00f;
-    color: #fff;
+    background-color: rgb(77, 77, 203);
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.cookie-customize button:hover,
+.cookie-customize button:focus {
+    background-color: rgb(77, 77, 203);
 }
