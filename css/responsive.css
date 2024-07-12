@@ -191,3 +191,67 @@
     }
 
 }
+
+/* Styles pour la bannière de cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.cookie-banner p {
+    margin: 0;
+    display: inline;
+}
+
+.cookie-banner a {
+    color: #00f;
+    text-decoration: underline;
+}
+
+.cookie-banner button {
+    background-color: #00f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Styles pour la personnalisation des cookies */
+.cookie-customize {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1001;
+    text-align: center;
+}
+
+.cookie-customize p {
+    margin-bottom: 20px;
+}
+
+.cookie-customize label {
+    display: block;
+    margin: 10px 0;
+}
+
+.cookie-customize button {
+    background-color: #00f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
