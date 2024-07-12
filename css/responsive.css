@@ -1,4 +1,16 @@
 
+:root {
+    --section-color:#ffffff;
+}
+
+/* Paramètres pour le mode nuit */
+[data-theme="dark"] {
+    --section-color:#004570;
+}
+
+
+
+
 .profile-picture {
     width: 150px;
     height: 150px;
@@ -19,7 +31,7 @@
 .project-card {
     max-width: 800px;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: var(--section-color);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 10px;
@@ -127,6 +139,9 @@
     box-sizing: border-box; /* Include padding in the element's total width */
 }
 
+.button {
+    background-color: #93a9d5 ;
+}
 
 /* menu déroulant */
 .dropdown {
