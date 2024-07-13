@@ -1,11 +1,11 @@
 
 :root {
-    --section-color:#ffffff;
+    --section-color:#004570;
 }
 
 /* Paramètres pour le mode nuit */
-[data-theme="dark"] {
-    --section-color:#004570;
+[data-theme="light"] {
+    --section-color:#ffffff;
 }
 
 .profile-picture {

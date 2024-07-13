@@ -32,3 +32,10 @@ function showSlides(n) {
     slides.forEach(slide => slide.classList.remove("active"));
     slides[slideIndex].classList.add("active");
 }
+
+function badgeTryHackMe() {
+    var container = document.getElementById('badge-container');
+    var script = document.createElement('script');
+    script.src = "https://tryhackme.com/badge/3236125";
+    container.appendChild(script);
+}

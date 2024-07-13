@@ -1,14 +1,5 @@
-/* Paramètres par défaut (mode jour) */
-:root {
-    --bg-color: #ffffff;  /* Couleur de fond principale */
-    --text-color: #000000;  /* Couleur du texte principal */
-    --main-color:#ffffff;
-    --accent-color: #0672b4;  /* Couleur d'accentuation */
-    --bg-image: url('../images/background.jpg');  /* Image de fond par défaut */
-}
 
-/* Paramètres pour le mode nuit */
-[data-theme="dark"] {
+:root {
     --bg-color: #1a1a1a;  /* Fond sombre */
     --text-color: #ffffff;  /* Texte blanc */
     --main-color:#032b44;
@@ -16,9 +7,18 @@
     --bg-image: url('../images/background-dark.jpg');  /* Image de fond pour le mode nuit */
 }
 
+/* Paramètres pour le mode nuit */
+[data-theme="light"] {
+    --bg-color: #ffffff;  /* Couleur de fond principale */
+    --text-color: #000000;  /* Couleur du texte principal */
+    --main-color:#ffffff;
+    --accent-color: #0672b4;  /* Couleur d'accentuation */
+    --bg-image: url('../images/background.jpg');  /* Image de fond par défaut */
+}
+
 /* Styles globaux */
 body {
-    font-family: 'Roboto','sans-sherif';
+    font-family: 'Roboto','Arial'!important;
     line-height: 1.6;
     margin: 0;
     padding: 0;
