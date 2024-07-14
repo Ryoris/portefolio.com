@@ -42,7 +42,7 @@ header {
     position: relative;
     z-index: 1;
 }
-
+    
 header::after {
     content: "";
     display: block;
@@ -131,14 +131,11 @@ a:hover {
         margin-top: 5px;
     }
 
-    nav ul {
-        padding: 0px 15px;
+    nav ul li {
+        display: inline-block;
+        margin: 5px 20px;
     }
 
-    nav ul li {
-        display: flex;
-        margin: 5px 15px;
-    }
 
     main {
         margin: 20px;
