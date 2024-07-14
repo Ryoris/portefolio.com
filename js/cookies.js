@@ -12,46 +12,49 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Script de gestion des cookies chargé.");
 
     function hideCookieBanner() {
-        console.log("Cacher la bannière de cookies.");
         cookieBanner.style.display = 'none';
     }
 
     function acceptAllCookies() {
-        console.log("Accepter tous les cookies.");
-        setCookie('cookies_accepted', 'true', 30); // Valable pendant 30 jours
+        setCookie('performance_cookies', 'true', 30);
+        setCookie('functionality_cookies', 'true', 30);
         hideCookieBanner();
     }
 
     function declineAllCookies() {
-        console.log("Refuser tous les cookies.");
-        eraseCookie('cookies_accepted');
+        eraseCookie('performance_cookies');
+        eraseCookie('functionality_cookies');
         hideCookieBanner();
     }
 
     function customizeCookies() {
-        console.log("Personnaliser les cookies.");
-        cookieBanner.style.display = 'none';
+        hideCookieBanner();
         cookieCustomize.style.display = 'block';
     }
 
     function saveCustomizedCookies() {
-        console.log("Sauvegarder les préférences de cookies personnalisées.");
         var performanceCookiesChecked = performanceCookiesCheckbox.checked;
         var functionalityCookiesChecked = functionalityCookiesCheckbox.checked;
-        // Vous pouvez ici définir les cookies selon les préférences de l'utilisateur
-        hideCookieBanner();
+        setCookie('performance_cookies', performanceCookiesChecked ? 'true' : 'false', 30);
+        setCookie('functionality_cookies', functionalityCookiesChecked ? 'true' : 'false', 30);
+        cookieCustomize.style.display = 'none';
     }
 
-    // Vérifier si le cookie `cookies_accepted` existe
-    function checkCookieAccepted() {
-        console.log("Vérifier si les cookies sont déjà acceptés.");
-        if (getCookie('cookies_accepted') === 'true') {
-            console.log("Les cookies sont acceptés");
-            if (cookieBanner){
-                hideCookieBanner();
-            }
+    function checkCookiesPreferences() {
+        console.log("Vérifier les préférences de cookies.");
+        var performanceCookies = getCookie('performance_cookies');
+        var functionalityCookies = getCookie('functionality_cookies');
+        if (performanceCookies === 'true' && functionalityCookies === 'true') {
+            console.log("Les cookies de performance et de fonctionnalité sont acceptés.");
+            hideCookieBanner();
+        } else if (performanceCookies === 'true') {
+            console.log("Seuls les cookies de performance sont acceptés.");
+            hideCookieBanner();
+        } else if (functionalityCookies === 'true') {
+            console.log("Seuls les cookies de fonctionnalité sont acceptés.");
+            hideCookieBanner();
         } else {
-            console.log("Les cookies ne sont pas acceptés.");
+            console.log("Aucun cookie n'est accepté.");
         }
     }
 
@@ -73,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // __________Au chargement de la page______________
 
     checkButton();
-    checkCookieAccepted();
+    checkCookiesPreferences();
 
     // Vérifier et appliquer le thème au chargement de la page
     var theme = getCookie('site_theme');
@@ -126,6 +129,11 @@ function applyTheme(theme) {
 
 // Fonction pour définir et appliquer le thème
 function setTheme(theme) {
-    setCookie('site_theme', theme, 30);
-    applyTheme(theme);
+    var functionalityCookies = getCookie('functionality_cookies');
+    if (functionalityCookies === 'true') {
+        setCookie('site_theme', theme, 30);
+        applyTheme(theme);
+    } else {
+        console.log("Les cookies de fonctionnalité ne sont pas acceptés, le thème ne sera pas défini.");
+    }
 }
