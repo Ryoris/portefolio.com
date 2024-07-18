@@ -39,8 +39,14 @@
                         <a href="Detect.objet.html">Detect. objet</a>
                     </div>
                 </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Site Web</a>
+                    <div class="dropdown-content">
+                        <a href="Portfolio.html.html">Portfolio</a>
+                        <a href="Moyap.html">Moyap</a>
+                    </div>
+                </li>
                 <li><a href="Deeps Hit.html">Deeps Hit</a></li>
-                <li><a href="Site Web.html">Site Web</a></li>
                 <li><a href="about.html">À propos</a></li>
             </ul>
         </nav>
@@ -62,7 +68,7 @@
                 <p>Une fois le chiffre dessiné, il faut convertir cette image en un format approprié pour le modèle de CNN. Cela implique de redimensionner l'image à 28x28 pixels, de la convertir en niveaux de gris et de normaliser les valeurs des pixels. Il ne fallait pas non plus oublier d’inverser les couleurs de l'image pour correspondre aux données d'entraînement du modèle (chiffres blancs sur fond noir).</p>
 
                 <h3>Entraînement du modèle de CNN</h3>
-                <p>Pour la reconnaissance des chiffres, j’ai utilisé un réseau de neurones convolutif (CNN). Le modèle a été entraîné sur le jeu de données MNIST, qui contient des milliers d'exemples de chiffres manuscrits. Le modèle comprend plusieurs couches de convolution et de pooling, suivies de couches entièrement connectées pour la classification. J’ai entraîné ce modèle en utilisant TensorFlow, puis je l’ai sauvegardé dans un fichier pour une utilisation ultérieure.</p>
+                <p>Pour la reconnaissance des chiffres, j’ai utilisé un réseau de neurones convolutif (voir <a href="Guide CNN.html">Guide CNN</a>). Le modèle a été entraîné sur le jeu de données MNIST, qui contient des milliers d'exemples de chiffres manuscrits. Le modèle comprend plusieurs couches de convolution et de pooling, suivies de couches entièrement connectées pour la classification. J’ai entraîné ce modèle en utilisant TensorFlow, puis je l’ai sauvegardé dans un fichier pour une utilisation ultérieure.</p>
 
                 <h3>Intégration du modèle dans l'application</h3>
                 <p>L'étape suivante a été de charger le modèle entraîné dans notre application tkinter. Lorsque l'utilisateur appuie sur le bouton "Prédire", l'image dessinée est prétraitée et passée au modèle, qui prédit alors le chiffre dessiné. La prédiction est ensuite affichée à l'utilisateur.</p>

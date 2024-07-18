@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IA Tetris</title>
+    <title>Moyap</title>
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
@@ -19,7 +19,7 @@
 </script>
 <body>
     <header>
-        <h1>IA Tetris</h1>
+        <h1>Moyap</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
@@ -53,35 +53,36 @@
     </header>
     <main>
         <section>
-            <h2>Une IA invincible à Tetris</h2>
-            <div class="video-container">
-                <video class="responsive-video" controls>
-                    <source src="../videos/tetris_gameplay.mp4" alt="Gameplay" type="video/mp4">
-                    Votre navigateur ne supporte pas la balise vidéo.
-                </video>
+            <h2>Application de Gestion des Notes Scolaires</h2>
+            <div class="image-container">
+                <img src="../images/Moyap/visuel.png" alt="Visuel" class="responsive-image">
             </div>
             <article>
                 <h3>Introduction</h3>
-                <p>Mon projet était de recréer le jeu Tetris en Python, jouable avec les touches du clavier, et par la suite développer une intelligence artificielle capable de jouer de manière optimale. Pour ce projet, les bibliothèques pygame et numpy ont été utilisées.</p>
-                
-                <h3>Algorithme de l'IA</h3>
-                <p>L'IA évalue chaque position possible pour chaque rotation possible de la pièce courante. Pour chaque position, elle simule la chute de la pièce et calcule un score basé sur les critères d'évaluation mentionnés ci-dessus.</p>
-                <p>Pour améliorer ses décisions, l'IA utilise une approche de recherche en profondeur, évaluant les conséquences de ses mouvements sur une pièce à l'avance. Cela permet à l'IA de planifier et d'anticiper les futurs coups.</p>
-                <p>Les heuristiques sont des règles utilisées pour guider l'IA vers des décisions optimales. Voici quelques heuristiques couramment utilisées dans mon algorithme :</p>
+                <p>Ce projet est une application web permettant aux utilisateurs de gérer les notes scolaires. Elle offre la possibilité d'ajouter, consulter et supprimer des notes pour différentes matières. Chaque note est associée à un coefficient et une date.</p>
+
+                <h3>Fonctionnalités Principales</h3>
                 <ul>
-                    <li><strong>Score des Hauteurs :</strong> Une pénalité est appliquée pour les hauteurs élevées.</li>
-                    <li><strong>Score des Trous :</strong> Une pénalité est appliquée pour chaque trou créé.</li>
-                    <li><strong>Score des Lignes Complètes :</strong> Une récompense est donnée pour chaque ligne complétée.</li>
-                    <li><strong>Score de Lissage :</strong> Une pénalité est appliquée pour la différence de hauteur entre les colonnes adjacentes.</li>
+                    <li><strong>Ajout de notes :</strong> Les utilisateurs peuvent ajouter des notes avec la matière, le coefficient, la note obtenue et la date.</li>
+                    <li><strong>Liste des notes :</strong> Les notes sont affichées dans une liste détaillant la matière, le coefficient, la note et la date, avec des options pour supprimer les notes.</li>
+                    <li><strong>Calcul de la moyenne :</strong> L'application calcule et affiche la moyenne pondérée des notes en fonction des coefficients.</li>
+                    <li><strong>Visualisation graphique :</strong> L'évolution des notes peut être visualisée sous forme de graphique pour une analyse facile.</li>
                 </ul>
-                <p>Nous obtenons ainsi le placement idéal, il ne reste plus qu'à déplacer la pièce jusqu'à cette position !</p>
-                
+
+                <h3>Technologies Utilisées</h3>
+                <p>
+                    <strong>Backend :</strong> Node.js avec Express pour le serveur, utilisant un exemple de base de données en mémoire pour les notes.<br>
+                    <strong>Frontend :</strong> React pour l'interface utilisateur, avec des composants pour le formulaire de saisie, la liste des notes et le calcul de la moyenne.<br>
+                    <strong>Services :</strong> Axios pour les appels API entre le frontend et le backend.
+                </p>
+
                 <h3>Conclusion</h3>
-                <p>Ce projet m'a permis d'apprendre à utiliser des critères d'évaluation et des algorithmes de recherche en profondeur pour créer une IA invincible à Tetris. Cela démontre comment les principes de l'intelligence artificielle peuvent être appliqués à des jeux vidéo pour créer des expériences de jeu à la fois impressionnantes.</p>
+                <p>Ce projet démontre comment une application web peut faciliter la gestion des notes scolaires en offrant une interface intuitive et des fonctionnalités avancées telles que le calcul de la moyenne et la visualisation graphique des notes.</p>
+
             </article>
-            <p><a href="https://github.com/Ryoris/jeux.python" target="_blank">Voir Github</a></p>
-            <p><strong>Technologies utilisées :</strong> Python</p> 
-            <p><span class="creation-date">Projet réalisé en juin 2024</span></p>
+            <p><a href="https://github.com/Ryoris/Moyap" target="_blank">Voir Github</a></p>
+            <p><strong>Technologies utilisées :</strong> Node.js, React, Axios</p> 
+            <p><span class="creation-date">Projet réalisé en juillet 2024</span></p>
         </section>
     </main>
     <p><a href="https://fr.freepik.com/photos-gratuite/fond-degrade-futuriste-lignes-particules_15601281.htm#query=fond%20site%20web&position=8&from_view=keyword&track=ais_user&uuid=c0e137e0-74fb-4ef8-b27b-c6f5d3493242" class= "attribution">Image de rawpixel.com sur Freepik</a></p>

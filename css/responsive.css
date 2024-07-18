@@ -20,10 +20,16 @@
 }
 
 .responsive-image {
-    padding-top: 15px ;
+    padding-top: 15px;
     padding-bottom: 15px;
     max-width: 80%;
 }
+
+.image-container {
+    text-align: center; /* Centre l'image horizontalement */
+    padding: 20px; /* Ajoute du padding autour de l'image */
+}
+
 
 .project-card {
     max-width: 800px;
